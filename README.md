@@ -1,154 +1,79 @@
-#ExamShow - Online Exam System
+# ExamShow - Java Full Stack Online Exam System
 
-On-Line Exam System is for Educational Institute to prepare an exam and online quiz
-for students of different domains like Sports,Programming, Science etc. and used for quiz
-events of Tech-Fest of Colleges.
-- Demo link admin Panel https://www.youtube.com/watch?v=aolbJEzlw9M
-- Faculty Panel https://www.youtube.com/watch?v=pt_GCn4-PQQ
-- Student Panel https://www.youtube.com/watch?v=v4IRpTMTFK4
+ExamShow is a comprehensive Online Exam and Quiz System designed for Educational Institutes. It enables faculties to prepare and host online exams, quizzes, and technical events for students across various domains like Programming, Science, and Sports.
 
-##Core Technologies Used 
+## 🚀 Core Technologies Used (Java Full Stack)
 
- Why Choose Java : Java makes the Application platform Independent .“Write Once, Run Anywhere”
+**Why Java?** Java ensures the application is robust, scalable, and platform-independent ("Write Once, Run Anywhere").
 
-- BackEnd : - J2SE,J2EE,JSTL,JUNIT
-- FrontEnd : Twitter Bootstrap,Ajax,jQuery,JSON,CSS,HTML 
-- Database : Mysql
+- **Backend:** Java (J2SE/J2EE), Servlets, JSP (JavaServer Pages), JDBC, JSTL, JUnit
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript, Twitter Bootstrap, AJAX, jQuery, JSON
+- **Database:** MySQL
+- **Architecture:** Standard MVC-based Full Stack Java Application built for Servlet Containers
 
-##Features
+## ✨ Features
 
+- **Student / User Panel:** 
+  - View subjects and practice MCQs.
+  - Register and easily appear for live quiz events.
+  - Real-time countdown timer tracking during quizzes.
+  - View detailed results and receive notifications.
 
-- Examshow makes it easy to share what matters most in your Quiz world !!
+- **Faculty Panel:** 
+  - Create, view, update, and securely delete exam papers.
+  - Append new questions dynamically using Rich Text Editors (TinyMCE).
+  - Track student results and send broadcast notifications.
 
-- User Interface : 
+- **Admin Panel:**
+  - Verify, manage, and moderate student accounts.
+  - Approve and verify faculty sign-ups.
+  - Manage overall quizzes and control the platform lifecycle.
 
-	+ User can View Subjects,Practice MCQs
-	+ User can register & appear for Quiz,View recent Events
-	+ User can View Results,Notifications
+## 📸 Application Screenshots
 
-- Faculty Panel : 
+Here is a glimpse of the application interface:
 
-	+ Faculty can make/delete papers
-	+ Faculty can view/update papers
-	+ Faculty can view results,append questions,send Notifications
+<p align="center">
+  <img src="screenshot-1.jpeg" width="45%" style="margin: 5px; border: 1px solid #ccc; border-radius: 5px;"/>
+  <img src="screenshot-2.jpeg" width="45%" style="margin: 5px; border: 1px solid #ccc; border-radius: 5px;"/>
+  <img src="screenshot-3.jpeg" width="45%" style="margin: 5px; border: 1px solid #ccc; border-radius: 5px;"/>
+  <img src="screenshot-4.jpeg" width="45%" style="margin: 5px; border: 1px solid #ccc; border-radius: 5px;"/>
+  <img src="screenshot-5.jpeg" width="45%" style="margin: 5px; border: 1px solid #ccc; border-radius: 5px;"/>
+</p>
 
-- Admin Panel :
+## 🛠️ Installation & Setup Guide
 
-	+ Admin can verify/view/delete students
-	+ Admin can verify/view/delete fauculty
-	+ Admin can view/delete Quiz
+1. **System Requirements:**
+   - **IDE:** NetBeans IDE (comes with a bundled Glassfish/Apache Tomcat server for JSP rendering).
+   - **Database:** MySQL Server (can use standalone or XAMPP/WAMP/phpMyAdmin).
 
+2. **Database Setup:**
+   - Create a MySQL database named `examshow`.
+   - Import the `examshow.sql` database file (found in the root directory) into your MySQL server.
 
-##Pre-requisites
+3. **Application Configuration:**
+   - Open NetBeans and select **File -> Open Project**, then choose the `examshow` folder.
+   - Navigate to `src/java/connection/Config.java`.
+   - Update the database credentials to match your local MySQL configuration:
+     ```java
+     String url = "jdbc:mysql://localhost:3306/examshow";
+     String user = "root"; // Update with your MySQL User
+     String pass = "root"; // Update with your MySQL Password
+     ```
 
+4. **Run the Project:**
+   - Right-click the project in the NetBeans Explorer and select **Run**.
+   - NetBeans will build the `.war` file, deploy it to the server, and launch the frontend UI in your default web browser automatically.
 
-- Download and install Netbeans 7.1 : Quickly and easily develop desktop, mobile and web applications
-with Java, JavaScript, HTML5, PHP, C/C++ and more.NetBeans IDE is FREE, open source, and has a worldwide community of users and developers. 
+## 🤖 Future Enhancements (AI Integration Roadmap)
 
-	+ Select Platform Linux x64 & all section
-	+ https://netbeans.org/downloads/
+Looking ahead, we plan to supercharge the ExamShow platform by integrating Artificial Intelligence (AI) to assist both students and faculty:
 
-	+In terminal,navigate to download directory & run
-```
-	sh netbeans-7.1-linux.sh
-```
-	+ select tomcat server instead of glassfish during installation
+- **AI-Powered Question Generation:** Automatically generate MCQ and descriptive questions from reference text materials, textbooks, or syllabus using NLP (Natural Language Processing).
+- **Intelligent Proctoring (Anti-Cheat System):** Leverage computer vision and real-time audio analysis via the student's webcam/microphone to monitor behavior and flag suspicious activities during exams.
+- **Adaptive Quiz Difficulty:** Implement a machine learning algorithm that adapts the difficulty of questions dynamically based on the student's real-time performance.
+- **Automated Descriptive Grading:** Use AI Language Models (LLMs) to grade short or long-format textual answers based on semantic understanding of the subject matter, going beyond strict keyword-matching.
+- **24/7 AI Student Assistant:** An interactive chatbot integrated into the student dashboard to answer technical subject queries, summarize performance, and recommend specific study concepts. 
 
-
-- Update your system : Ubuntu Source list generator: https://repogen.simplylinux.ch/generate.php
-
-```
-	sudo apt-get update
-	sudo apt-get upgrade
-```
-
-- Install MySQL
-
-```
-	sudo apt-get install mysql-server
-```
-
-	+ Start/Stop Mysql server 
-	
-	```
-		sudo service mysql start
-		sudo service mysql stop
-	```
-
-	+ To log in to MySQL as the root user:
-	
-	```
-		mysql -u root -p
-	```
-
-	+ Create a New MySQL User and Database
-
-	```
-		create database testdb;
-		create user 'testuser'@'localhost' identified by 'password';
-		grant all on testdb.* to 'testuser';
-	```
-
-
-
-
-- Install phpmyadmin : phpMyAdmin is a web application that provides a GUI to aid in MySQL database administration
-
-	+ Step 1: Install Apache2, PHP and MySQL. We assume you already have installed LAMP on your system.
-
-		- Install Apache 
-		```
-			sudo apt-get install apache2
-			sudo service apache2 restart
-		```
-
-		- Install PHP
-
-		```
-			sudo apt-get install php5
-		```
-				
-		-If you need MySQL support also install php5-mysql
-		
-		```
-			sudo apt-get install php5-mysql
-		```
-
-	+ Step 2: Install phpMyAdmin.
-
-	```
-		sudo apt-get install phpmyadmin
-	```
-
-		- After the installation has completed, add phpmyadmin to the apache configuration.
-		```
-			sudo vi /etc/apache2/apache2.conf
-		```
-
-		- Add the phpmyadmin config to the file.
-		```
-			Include /etc/phpmyadmin/apache.conf
-		```
-
-		- Restart apache:
-		```
-			sudo service apache2 restart
-		```
-
-##Database Import
-
--create database codeshare on Mysql
--Import codeshare.sql database from phpmyadmin
-- Download the repository in Extract to NetBeansProjects folder of your home directory
-- Open Netbeans and import project 
-- Change Config.java in src/java/connection/Config.java
-
-```java
-    String url = "jdbc:mysql://localhost:3306/examshow";
-    String user = "YOUR_DB_USER";
-    String pass = "YOUR_DB_PASS";
-```
-
-##To Run : 
-
-- Right click on Project codeoj & select deploy to run the project
+---
+*Developed for robust and scalable online assessments.*
