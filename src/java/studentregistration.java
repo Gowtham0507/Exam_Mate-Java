@@ -78,14 +78,12 @@ public class studentregistration extends HttpServlet {
             if(check==0)
             {
                 String query="insert into student values('"+name+"','"+rollno+"','"+newpasswd+"','"+institute+"','"+sem+"','"+email+"','"+number+"','"+dob+"','"+sex+"','"+code+"')";
-                out.println(query);
                 st.executeUpdate(query);
-                String msg="Your verification CODE is:"+code+" .<br/>To verify Click on this link http://www.codeoj.com/examshow/Verification.jsp?email="+email+"&authcode="+code+"";
-                 System.out.print("msg is" +msg);
-                 //mailing preocess
-                out.print("msg is" +msg);
-                MailVerify mv=new MailVerify(email, msg);
-                mv.verify();
+                // SMTP server mail.codeshare.in is dead. Disabling MailVerify to prevent connection timeout.
+                // String msg="Your verification CODE is:"+code+" .<br/>To verify Click on this link http://www.codeoj.com/examshow/Verification.jsp?email="+email+"&authcode="+code+"";
+                // System.out.print("msg is" +msg);
+                // MailVerify mv=new MailVerify(email, msg);
+                // mv.verify();
                 con.close();
                 response.sendRedirect("index.jsp?RegisterStudent=True");
             }
@@ -95,7 +93,7 @@ public class studentregistration extends HttpServlet {
                 response.sendRedirect("index.jsp?existsStudent=True");
             }
 
-            con.close();
+            // no need to close con again if it's already closed
         }
         catch(Exception e)
         {
