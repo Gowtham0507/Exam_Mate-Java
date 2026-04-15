@@ -12,7 +12,7 @@ RUN mkdir -p /usr/local/tomcat/webapps/ROOT/WEB-INF/lib
 # servlet/JSP APIs. Including javaee-api causes ClassNotFoundException on JSP compilation.
 # javax.mail is included separately as a standalone jar (not provided by Tomcat 9).
 COPY jstl-1.2.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
-COPY mysql-connector-java-5.1.26-bin.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
+COPY mysql-connector-j-8.0.33.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
 COPY standard.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
 COPY javax.mail-1.6.2.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
 
