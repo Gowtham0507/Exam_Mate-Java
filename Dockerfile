@@ -14,6 +14,12 @@ COPY mysql-connector-java-5.1.26-bin.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/
 COPY standard.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
 COPY javaee-api-6.0.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
 
+# Download JSF implementation JARs (required for com.sun.faces.config.ConfigureListener)
+RUN curl -fL -o /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/jsf-api.jar \
+    https://repo1.maven.org/maven2/com/sun/faces/jsf-api/2.2.20/jsf-api-2.2.20.jar && \
+    curl -fL -o /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/jsf-impl.jar \
+    https://repo1.maven.org/maven2/com/sun/faces/jsf-impl/2.2.20/jsf-impl-2.2.20.jar
+
 # Copy web content (JSPs, CSS, JS)
 COPY web/ /usr/local/tomcat/webapps/ROOT/
 
