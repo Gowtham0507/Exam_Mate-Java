@@ -3,94 +3,117 @@
     <servlet>
         <servlet-name>delete</servlet-name>
         <servlet-class>delete</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>adminlogin</servlet-name>
         <servlet-class>adminlogin</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>studentpasschange</servlet-name>
         <servlet-class>studentpasschange</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>adminpasschange</servlet-name>
         <servlet-class>adminpasschange</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>facultypasschange</servlet-name>
         <servlet-class>facultypasschange</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>feedback</servlet-name>
         <servlet-class>feedback</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>studentregistration</servlet-name>
         <servlet-class>studentregistration</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>logout</servlet-name>
         <servlet-class>logout</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>facultylogin</servlet-name>
         <servlet-class>facultylogin</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>mkpaper</servlet-name>
         <servlet-class>mkpaper</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>facultyregistration</servlet-name>
         <servlet-class>facultyregistration</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>studentlogin</servlet-name>
         <servlet-class>studentlogin</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>servnotice</servlet-name>
         <servlet-class>servnotice</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>addsubject</servlet-name>
         <servlet-class>addsubject</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>subjectdelete</servlet-name>
         <servlet-class>subjectdelete</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>updatepaper</servlet-name>
         <servlet-class>updatepaper</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>delpaper</servlet-name>
         <servlet-class>delpaper</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>nextpage</servlet-name>
         <servlet-class>nextpage</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>examsentry</servlet-name>
         <servlet-class>examsentry</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>reg</servlet-name>
         <servlet-class>reg</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>showpaper_servlet</servlet-name>
         <servlet-class>showpaper_servlet</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>result</servlet-name>
         <servlet-class>result</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>showresult_servlet</servlet-name>
         <servlet-class>showresult_servlet</servlet-class>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>studentregistration</servlet-name>
