@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import connection.*;
 import java.security.MessageDigest;
-import sun.misc.*;
+import java.util.Base64;
 
 /**
  *
@@ -50,7 +50,7 @@ public class studentlogin extends HttpServlet {
             MessageDigest MD5=MessageDigest.getInstance("MD5");
             MD5.update(passwd.getBytes(),0,passwd.getBytes().length);
             byte[] hashvalue=MD5.digest();
-            String newpasswd=new BASE64Encoder().encode(hashvalue);
+            String newpasswd=Base64.getEncoder().encodeToString(hashvalue);
             
             Config c = new Config();
             Connection con = c.getcon();

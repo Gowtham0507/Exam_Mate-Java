@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import connection.*;
 import java.security.MessageDigest;
-import sun.misc.BASE64Encoder;
+import java.util.Base64;
 /**
  *
  * @author ICT
@@ -48,10 +48,10 @@ public class facultypasschange extends HttpServlet {
               MessageDigest MD5=MessageDigest.getInstance("MD5");
             MD5.update(current.getBytes(),0,current.getBytes().length);
             byte[] hashvalue=MD5.digest();
-            String newcurrent=new BASE64Encoder().encode(hashvalue);
+            String newcurrent=Base64.getEncoder().encodeToString(hashvalue);
             MD5.update(change.getBytes(),0,change.getBytes().length);
             byte[] hashvaluea=MD5.digest();
-            String newchange=new BASE64Encoder().encode(hashvaluea);
+            String newchange=Base64.getEncoder().encodeToString(hashvaluea);
             
             Config c = new Config();
             Connection con = c.getcon();
