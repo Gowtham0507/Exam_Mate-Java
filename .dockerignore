@@ -1,0 +1,7 @@
+.git
+*.md
+*.txt
+nbproject
+build
+dist
+screenshot-*.jpeg
