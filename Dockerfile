@@ -19,6 +19,8 @@ COPY javax.mail-1.6.2.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
 # Copy web content (JSPs, CSS, JS, WEB-INF/web.xml)
 COPY web/ /usr/local/tomcat/webapps/ROOT/
 
+# Copy database schema to WEB-INF for auto-initialization
+COPY examshow.sql /usr/local/tomcat/webapps/ROOT/WEB-INF/
 # Copy source files for compilation
 COPY src/java/ /tmp/src/
 
