@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -56,7 +56,7 @@ public class facultylogin extends HttpServlet {
             Config c = new Config();
             Connection con = c.getcon();
             String selectStatement = "SELECT * FROM faculty WHERE facultyID = ? ";
-            PreparedStatement prepStmt = (PreparedStatement) con.prepareStatement(selectStatement);
+            PreparedStatement prepStmt = con.prepareStatement(selectStatement);
             prepStmt.setString(1, uname);
             rs = prepStmt.executeQuery();
             if(rs.next())

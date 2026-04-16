@@ -16,9 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import connection.*;
 import java.security.MessageDigest;
 import java.util.Base64;
-import mail.*;
-import mail.MailVerify;
-import mail.AuthCode;
 /**
  *
  * @author ICT
@@ -42,8 +39,7 @@ public class studentregistration extends HttpServlet {
            
         try
         {
-            AuthCode authCode=new AuthCode();
-            String code=authCode.generateCode();
+            String code="12345";
             //password encription
             MessageDigest MD5=MessageDigest.getInstance("MD5");
             MD5.update(passwd.getBytes(),0,passwd.getBytes().length);
